@@ -1,184 +1,473 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+/* --- Aquí van los estilos de estructura y fondos --- */
+.layout-inicio {
+  background-image: url('/imagenes/inicio.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
+.layout-app {
+  background-image: url('/imagenes/fondoapp.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
 }
 
-#center {
+/* --- Aquí van los estilos de la cabecera --- */
+.contenedorsup {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 40px;
+  height: 80px; /* Altura fija para que no crezca */
 }
 
-#next-steps {
+.logo-img {
+  height: 60px; /* Tamaño del logo */
+  width: auto;
+  cursor: pointer;
+}
+
+.menu {
   display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
+  gap: 30px;
   list-style: none;
-  padding: 0;
+}
+
+.btn-nav {
+  background: none;
+  border: none;
+  color: #8fb932;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* --- para dar sombra a los textos en azul --- */
+.titulo-principal {
+  font-family: "Ysabeau Infant", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color:white;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 
+    -1px -1px 0 dodgerblue,
+    -1px 1px 0 dodgerblue,
+    1px 1px 0 dodgerblue,
+    1px -1px 0 dodgerblue;
+    font-size: clamp(28px, 5vw, 50px);
+    margin-top: 10px;
+}
+
+.descripcion {
+  font-family: "Ysabeau Infant", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color:white;
+    text-align: center;
+    font-size: clamp(16px, 3vw, 25px);
+    text-shadow: 
+    -1px -1px 0 dodgerblue,
+    -1px 1px 0 dodgerblue,
+    1px 1px 0 dodgerblue,
+    1px -1px 0 dodgerblue;
+    margin-bottom: 50px;
+}
+
+/* --- estilos de botón verde --- */
+.seccion-registro {
   display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
+  justify-content: center;
+  margin-top: 30px;
+}
 
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
+.btn-verde {
+  display: inline-block; 
+    background-color: #B8E04A; 
+    color: white; 
+    font-weight: 50; 
+    padding: 14px 40px;
+    border-radius: 20px; 
+    text-decoration: none; 
+    box-shadow: 0 6px 0 #8fb932; 
+    transition: all 0.3s ease;
     display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
     justify-content: center;
+    font-size: 25px;
+    font-family: "Ysabeau Infant", sans-serif;
+    font-weight: 800;
+    font-style: normal;
 
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+}
+.btn-verde:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #8fb932;
+}
+.btn-verde:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #8fb932;
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+/* --- Para los botones rojos --- */
+.btn-rojo {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: 800;
+  padding: 14px 40px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 6px 0 #b93232;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-style: normal;
+}
+.btn-rojo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 #b93232;
+}
+.btn-rojo:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #b93232;
 }
 
-.ticks {
+/* Esto centra la tarjeta blanca en pantalla */
+.layout-app {
+  background-image: url('/imagenes/fondoapp.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;         /* Activa el centrado */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+}
+
+/* La tarjeta blanca (Card) */
+.contenedor {
+  background-color: white;
+  border-radius: 25px;   /*para que los Bordes  queden redondeados */
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;      /* Evita que se estire mucho */
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+  font-family: "Ysabeau Infant", sans-serif;
   position: relative;
+}
+
+/* Estilo del texto dentro de la tarjeta */
+.titulo-mision {
+  color: #0D3B66;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.texto-mision {
+  color: #0D3B66;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 18px;
+  text-shadow: none; /* Quitamos la sombra azul aquí para que se lea bien */
+}
+
+.volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #0D3B66;
+}
+/* --- principales contenedores --- */
+.layout-inicio, .layout-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* esto alinea header arriba y main abajo */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.layout-inicio { background-image: url('/imagenes/inicio.png'); }
+.layout-app { background-image: url('/imagenes/fondoapp.png'); }
+
+/* --- HEADER (BARRA BLANCA) --- */
+.contenedorsup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 40px;
+  height: 80px;
   width: 100%;
+  box-sizing: border-box; /* Evita que el padding ensanche la barra */
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
+/* --- aquí va la seccion de la tarjeta --- */
+.seccion-principal {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; /* cambiamos de center a flex-start para subir el texto */
+  align-items: center;     
+  padding-top: 40px;          /* Controla qué tan cerca de la barra blanca empieza el texto */
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
+/* ---estilo de la tarjetita blanca --- */
+.contenedor {
+  background-color: white;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+  position: relative;
+  
+  
+  font-family: "Ysabeau Infant", sans-serif; 
+}
+
+.titulo-mision {
+  font-family: "Ysabeau Infant", sans-serif;
+  font-weight: 600; /* Para que se vea la letra gruesa como en el inicio */
+  color: #0D3B66;
+  text-align: center;
+}
+
+.texto-mision {
+  font-family: "Ysabeau Infant", sans-serif;
+  color: #0D3B66;
+  font-weight: 500; /* Un poco menos gruesa que el título */
+  line-height: 1.6;
+}
+
+.volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #0D3B66;
+  cursor: pointer;
+}
+.volver:hover {
+    transform: translateY(-3px);
+    
+}
+.volver:active {
+    transform: translateY(4px);
+
+}
+/* Estilo para la línea debajo de Misión */
+.linea-mision {
+  width: 150px;           /* esto controla el largo de la línea */
+  border: 0;
+  height: 3px;
+  background-color: #0D3B66; /* El color azul oscuro del diseño */
+  margin: 10px auto 25px; /* La centra y le da espacio respecto al texto */
+  border-radius: 2px;
+}
+
+/* Estilo para las etiquetas (Nombre, Correo...) */
+.contenedorb label {
+  display: block;
+  color: #0D3B66; /* Azul oscuro del tema */
+  font-weight: 800;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Estilo para las cajas de texto */
+.contenedorb input {
+  width: 100%;           /* Que ocupen todo el ancho de la tarjeta */
+  padding: 12px;         /* Espacio interno para que no se vea apretado */
+  border: 2px solid #DCEEFB; /* Un borde azul clarito */
+  border-radius: 12px;   /* Bordes redondeados */
+  background-color: #F0F4F8; /* Un fondo grisáceo muy suave */
+  font-family: "Ysabeau Infant", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box; /* Importante para que el padding no ensanche el input */
+  transition: border-color 0.3s ease;
+  color: #0D3B66;
+}
+
+/* Efecto cuando se hace clic para escribir */
+.contenedorb input:focus {
+  outline: none;
+  border-color: #8fb932; /* Cambia a verde cuando se escribe */
+  background-color: white;
+}
+
+/* Estilo para los select */
+.contenedorb select {
+  width: 100%;           /* Que ocupen todo el ancho de la tarjeta */
+  padding: 12px;         /* Espacio interno para que no se vea apretado */
+  border: 2px solid #DCEEFB; /* Un borde azul muy clarito */
+  border-radius: 12px;   /* Bordes redondeados */
+  background-color: #F0F4F8; /* Un fondo grisáceo*/
+  font-family: "Ysabeau Infant", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box; /* Importante para que el padding no ensanche el select */
+  transition: border-color 0.3s ease;
+  color: #0D3B66;
+}
+
+/* Efecto cuando hacemos clic en select */
+.contenedorb select:focus {
+  outline: none;
+  border-color: #8fb932; /* Cambia a verde cuando se selecciona */
+  background-color: white;
+}
+
+.filtros-totales {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filtros-totales label {
+  font-weight: 700;
+  color: #0D3B66;
+}
+
+.filtros-totales select {
+  margin-left: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.grafica-circular-wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grafica-circular {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  background: white;
+}
+
+.leyenda-circular {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  max-width: 220px;
+}
+
+.leyenda-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #0D3B66;
+}
+
+.leyenda-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.menu-icon {
+    display: none; /* para que se oculte en pantallas grandes */
+    font-size: 30px;
+    color: #8fb932;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+
+    .registro .btn {
+        width: 60%;
+        text-align: center;
+        font-size: 18px;
+    }
+    .contenedorsup {
+        padding: 8px 15px;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 14px;
+        border-radius: 15px;
+    }
+    h1{
+        margin: 30px 10px;
+    }
+    p {
+        margin: 30px 20px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 10px 0 0 10px;
+        z-index: 1000;
+    }
+
+    .menu li{
+        margin-bottom: 15px;
+    }
+
+
+    /* Cuando el checkbox está activado */
+    #menu-toggle:checked ~ .menu{
+        display: flex;
+    }
+}
+
+.btn-mas, .btn-menos {
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    box-shadow: inset 0 -3px rgba(0,0,0,0.2);
+}
+
+.btn-menos {
+    background-color: #ff4d4d;
+}
+
+.btn-mas {
+    background-color: #7ed957;
+}
+
+
+.btn-mas:hover,.btn-menos:hover {
+    filter: brightness(1.1);
+}
+
+.btn-mas:active,.btn-menos:active {
+    transform: scale(0.95);
 }
