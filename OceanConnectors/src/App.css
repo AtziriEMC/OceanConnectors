@@ -1,4 +1,26 @@
-/* --- Aquí van los estilos de estructura y fondos --- */
+/* Estilo tabla*/
+.tabla-registros {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: table;
+  max-width: 100%;
+  width: 100%;
+}
+.contenedorb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Estilo alternado */
+.tabla-registros tbody tr:nth-child(even) {
+  background-color: #e3f0ff; /* azul claro */
+}
+.tabla-registros tbody tr:nth-child(odd) {
+  background-color: #fff; /* blanco */
+}
+/* fondo inicio */
 .layout-inicio {
   background-image: url('/imagenes/inicio.png');
   background-size: cover;
@@ -13,7 +35,7 @@
   min-height: 100vh;
 }
 
-/* --- Aquí van los estilos de la cabecera --- */
+/* barra de menu*/
 .contenedorsup {
   display: flex;
   justify-content: space-between;
@@ -24,7 +46,7 @@
 }
 
 .logo-img {
-  height: 60px; /* Tamaño del logo */
+  height: 60px; 
   width: auto;
   cursor: pointer;
 }
@@ -45,7 +67,7 @@
   cursor: pointer;
 }
 
-/* --- para dar sombra a los textos en azul --- */
+/* Textos pagina principal*/
 .titulo-principal {
   font-family: "Ysabeau Infant", sans-serif;
     font-weight: 900;
@@ -77,7 +99,7 @@
     margin-bottom: 50px;
 }
 
-/* --- estilos de botón verde --- */
+/* BOTÓN VERDE  */
 .seccion-registro {
   display: flex;
   justify-content: center;
@@ -111,7 +133,7 @@
     box-shadow: 0 2px 0 #8fb932;
 }
 
-/* --- Para los botones rojos --- */
+/* BOTÓN ROJO */
 .btn-rojo {
   display: inline-block;
   background-color: #e74c3c;
@@ -137,30 +159,30 @@
   box-shadow: 0 2px 0 #b93232;
 }
 
-/* Esto centra la tarjeta blanca en pantalla */
+
 .layout-app {
   background-image: url('/imagenes/fondoapp.png');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  display: flex;         /* Activa el centrado */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Centra verticalmente */
+  display: flex;         
+  justify-content: center; 
+  align-items: center;    
 }
 
-/* La tarjeta blanca (Card) */
+
 .contenedor {
   background-color: white;
-  border-radius: 25px;   /*para que los Bordes  queden redondeados */
+  border-radius: 25px;   
   padding: 40px;
   width: 90%;
-  max-width: 500px;      /* Evita que se estire mucho */
+  max-width: 500px;     
   box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
   font-family: "Ysabeau Infant", sans-serif;
   position: relative;
 }
 
-/* Estilo del texto dentro de la tarjeta */
+/* Estilo del texto de paginas secundarias */
 .titulo-mision {
   color: #0D3B66;
   text-align: center;
@@ -172,7 +194,7 @@
   text-align: justify;
   line-height: 1.6;
   font-size: 18px;
-  text-shadow: none; /* Quitamos la sombra azul aquí para que se lea bien */
+  text-shadow: none; 
 }
 
 .volver {
@@ -182,11 +204,10 @@
   font-size: 24px;
   color: #0D3B66;
 }
-/* --- principales contenedores --- */
 .layout-inicio, .layout-app {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* esto alinea header arriba y main abajo */
+  flex-direction: column; 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -195,7 +216,6 @@
 .layout-inicio { background-image: url('/imagenes/inicio.png'); }
 .layout-app { background-image: url('/imagenes/fondoapp.png'); }
 
-/* --- HEADER (BARRA BLANCA) --- */
 .contenedorsup {
   display: flex;
   justify-content: space-between;
@@ -204,22 +224,22 @@
   padding: 10px 40px;
   height: 80px;
   width: 100%;
-  box-sizing: border-box; /* Evita que el padding ensanche la barra */
+  box-sizing: border-box; 
 }
 
-/* --- aquí va la seccion de la tarjeta --- */
+
 .seccion-principal {
   flex-grow: 1; 
   display: flex;
   flex-direction: column; 
-  justify-content: flex-start; /* cambiamos de center a flex-start para subir el texto */
+  justify-content: flex-start; 
   align-items: center;     
-  padding-top: 40px;          /* Controla qué tan cerca de la barra blanca empieza el texto */
+  padding-top: 40px;       
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* ---estilo de la tarjetita blanca --- */
+
 .contenedor {
   background-color: white;
   border-radius: 25px;
@@ -228,14 +248,12 @@
   width: 100%;
   box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
   position: relative;
-  
-  
   font-family: "Ysabeau Infant", sans-serif; 
 }
 
 .titulo-mision {
   font-family: "Ysabeau Infant", sans-serif;
-  font-weight: 600; /* Para que se vea la letra gruesa como en el inicio */
+  font-weight: 600;
   color: #0D3B66;
   text-align: center;
 }
@@ -243,7 +261,7 @@
 .texto-mision {
   font-family: "Ysabeau Infant", sans-serif;
   color: #0D3B66;
-  font-weight: 500; /* Un poco menos gruesa que el título */
+  font-weight: 500; 
   line-height: 1.6;
 }
 
@@ -261,22 +279,21 @@
 }
 .volver:active {
     transform: translateY(4px);
-
+   
 }
 /* Estilo para la línea debajo de Misión */
 .linea-mision {
-  width: 150px;           /* esto controla el largo de la línea */
-  border: 0;
-  height: 3px;
-  background-color: #0D3B66; /* El color azul oscuro del diseño */
-  margin: 10px auto 25px; /* La centra y le da espacio respecto al texto */
+  width: 150px;          
+  height: 3px;           
+  background-color: #0D3B66; 
+  margin: 10px auto 25px; 
   border-radius: 2px;
 }
 
-/* Estilo para las etiquetas (Nombre, Correo...) */
+/* Estilo para las labels */
 .contenedorb label {
   display: block;
-  color: #0D3B66; /* Azul oscuro del tema */
+  color: #0D3B66; 
   font-weight: 800;
   margin-bottom: 5px;
   margin-top: 10px;
@@ -284,47 +301,46 @@
   width: 100%;
 }
 
-/* Estilo para las cajas de texto */
+/* Estilo para inputs */
 .contenedorb input {
-  width: 100%;           /* Que ocupen todo el ancho de la tarjeta */
-  padding: 12px;         /* Espacio interno para que no se vea apretado */
-  border: 2px solid #DCEEFB; /* Un borde azul clarito */
-  border-radius: 12px;   /* Bordes redondeados */
-  background-color: #F0F4F8; /* Un fondo grisáceo muy suave */
+  width: 100%;          
+  padding: 12px;        
+  border: 2px solid #DCEEFB; 
+  border-radius: 12px;  
+  background-color: #F0F4F8; 
   font-family: "Ysabeau Infant", sans-serif;
   font-size: 16px;
-  box-sizing: border-box; /* Importante para que el padding no ensanche el input */
+  box-sizing: border-box; 
   transition: border-color 0.3s ease;
   color: #0D3B66;
 }
 
-/* Efecto cuando se hace clic para escribir */
+
 .contenedorb input:focus {
   outline: none;
-  border-color: #8fb932; /* Cambia a verde cuando se escribe */
+  border-color: #8fb932; 
   background-color: white;
 }
 
 /* Estilo para los select */
 .contenedorb select {
-  width: 100%;           /* Que ocupen todo el ancho de la tarjeta */
-  padding: 12px;         /* Espacio interno para que no se vea apretado */
-  border: 2px solid #DCEEFB; /* Un borde azul muy clarito */
-  border-radius: 12px;   /* Bordes redondeados */
-  background-color: #F0F4F8; /* Un fondo grisáceo*/
+  width: 100%;          
+  padding: 12px;         
+  border: 2px solid #DCEEFB; 
+  border-radius: 12px;   
+  background-color: #F0F4F8; 
   font-family: "Ysabeau Infant", sans-serif;
   font-size: 16px;
-  box-sizing: border-box; /* Importante para que el padding no ensanche el select */
-  transition: border-color 0.3s ease;
+  box-sizing: border-box; 
   color: #0D3B66;
 }
 
-/* Efecto cuando hacemos clic en select */
 .contenedorb select:focus {
   outline: none;
-  border-color: #8fb932; /* Cambia a verde cuando se selecciona */
+  border-color: #8fb932; 
   background-color: white;
 }
+
 
 .filtros-totales {
   display: flex;
@@ -384,7 +400,7 @@
 }
 
 .menu-icon {
-    display: none; /* para que se oculte en pantallas grandes */
+    display: none; 
     font-size: 30px;
     color: #8fb932;
     cursor: pointer;
@@ -456,13 +472,12 @@
 }
 
 .btn-menos {
-    background-color: #ff4d4d;
+    background-color: #ff4d4d; 
 }
 
 .btn-mas {
-    background-color: #7ed957;
+    background-color: #7ed957; 
 }
-
 
 .btn-mas:hover,.btn-menos:hover {
     filter: brightness(1.1);
