@@ -72,6 +72,7 @@ function App() {
     alEstacion1={() => setVista('estacion1')} 
     alEstacion2={() => setVista('estacion2')} 
     alEstacion3={() => setVista('estacion3')} 
+    alFinalizar={() => setVista('inicio')}
   />
 )}
 
