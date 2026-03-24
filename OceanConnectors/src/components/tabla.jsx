@@ -3,7 +3,6 @@ import BackButton from './BackButton';
 
 const Tabla = ({ alVolver, titulo, storageKey }) => {
   
-  // 1. Cargamos TODO (cantidades y bloqueo) directamente aquí para evitar el useEffect
   const [cantidades, setCantidades] = useState(() => {
     const datosGuardados = localStorage.getItem(storageKey);
     return datosGuardados ? JSON.parse(datosGuardados) : {
@@ -14,8 +13,6 @@ const Tabla = ({ alVolver, titulo, storageKey }) => {
 
   const [estaBloqueado, setEstaBloqueado] = useState(() => !!localStorage.getItem(storageKey));
 
-  // 2. Este useEffect solo servirá para RESETEAR si cambias de estación 
-  // (por ejemplo de Estación 1 a Estación 2)
   useEffect(() => {
     const datosGuardados = localStorage.getItem(storageKey);
     if (datosGuardados) {
@@ -63,7 +60,6 @@ const Tabla = ({ alVolver, titulo, storageKey }) => {
       </div>
 
       <div className="contenedorb">
-        {/* Usamos el título que viene por prop */}
         <h1 className="titulo-mision">{titulo}</h1> 
         <div className="linea-mision"></div>
 
