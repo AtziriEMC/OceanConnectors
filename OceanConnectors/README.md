@@ -1,4 +1,3 @@
-# OceanConnectors
 Hagamos Ciencia con la Basura en las Playas de México
 Este es un proyecto de desarrollo web diseñado para la asociacion Ocean conectors que busca concientizar y recolectar datos sobre la contaminación por residuos en las costas mexicanas. La aplicación permitira a los niños registrar diferentes tipos de materiales encontrados en las playas, visualizando el impacto ambiental a través de gráficas interactivas.
 
