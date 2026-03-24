@@ -3,10 +3,11 @@ import BackButton from './BackButton';
 
 const Registro = ({ alVolver, alSiguiente }) => {
   // Estado inicial con datos de localStorage si existen
+  const hoy = new Date().toISOString().split('T')[0];
   const [datos, setDatos] = useState(() => {
     const guardado = localStorage.getItem('datosRegistro');
-    return guardado ? JSON.parse(guardado) : {
-      fecha: '',
+    return guardado ? { ...JSON.parse(guardado), fecha: hoy } : {
+      fecha: hoy,
       pais: 'mexico',
       localidad: '',
       playa: '',
@@ -46,8 +47,10 @@ const Registro = ({ alVolver, alSiguiente }) => {
             id="fecha" 
             name="fecha" 
             value={datos.fecha}
-            onChange={manejarCambio}
-            required 
+            required
+            min={hoy}
+            max={hoy}
+            readOnly
           />
 
           <label htmlFor="pais">
